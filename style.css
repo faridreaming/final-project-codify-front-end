@@ -5,4 +5,62 @@
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-1: #0d1b2a;
+  --color-2: #1b263b;
+  --color-3: #415a77;
+  --color-4: #778da9;
+  --color-5: rgb(224, 225, 221);
+  --color-5-50: rgba(224, 225, 221, 0.5);
+  --color-5-25: rgba(224, 225, 221, 0.25);
+  --basic-border-style: 0.1rem solid var(--color-5);
+  --basic-border-radius: 0.25rem;
+  --basic-transition: 0.3s;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-1);
+  margin-bottom: 100rem;
+}
+
+.container {
+  padding: 1rem;
+  width: 100dvh;
+  margin-left: 4.625rem;
+}
+
+header {
+  border-right: 0.1rem solid var(--color-5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+header nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 1rem;
+  margin-inline: auto;
+  height: 100%;
+}
+
+header nav a {
+  display: flex;
+  padding: 0.5rem;
+  border-radius: var(--basic-border-radius);
+  border: var(--basic-border-style);
+  transition: var(--basic-transition);
+}
+
+header nav a:hover,
+header nav a.active {
+  background-color: var(--color-5-25);
 }
