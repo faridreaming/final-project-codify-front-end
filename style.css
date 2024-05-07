@@ -12,6 +12,8 @@
   --color-1: #0d1b2a;
   --color-2: #1b263b;
   --color-3: #415a77;
+  --color-3-50: #415a7780;
+  --color-3-25: #415a7740;
   --color-4: #778da9;
   --color-w-1: #f8f9fa;
   --color-w-2: #e9ecef;
@@ -34,13 +36,14 @@ body {
 }
 
 .container {
-  padding: 8rem 1rem;
+  padding: 8rem 2rem;
   /* width: calc(100vw - 5.125rem); */
   margin-left: 5.125rem;
 }
 
 .wrapper {
   max-width: 80rem;
+  width: 100%;
   margin-inline: auto;
 }
 
@@ -97,22 +100,21 @@ body {
 .about {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   gap: 2rem;
 }
 
 .about img {
   border-radius: 50%;
   aspect-ratio: 1;
-  width: 20rem;
-  height: 20rem;
-  background-color: var(--color-w-4);
-  filter: grayscale(92.5%);
+  width: 17.5rem;
+  height: 17.5rem;
+  background-color: var(--color-w-5);
+  filter: grayscale(15%) brightness(105%);
   transition: var(--basic-transition);
 }
 
 .about img:hover {
-  filter: grayscale(15%);
+  background-color: var(--color-w-4);
 }
 
 .about .about-text-wrapper {
@@ -120,6 +122,45 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+
+.education-wrapper {
+  display: grid;
+  row-gap: 2rem;
+  width: 100%;
+  padding-left: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.education-wrapper::before {
+  content: "";
+  display: block;
+  width: 0.125rem;
+  height: 100%;
+  left: calc(1rem - 0.125rem / 2);
+  background-color: var(--color-3-25);
+  position: absolute;
+  margin-block-start: 1rem;
+}
+
+.education {
+  line-height: 2rem;
+  position: relative;
+}
+
+.sub-title::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  top: 0;
+  left: -1.5rem;
+  background-color: var(--color-4);
+  margin-block: 0.5rem 0;
 }
 
 header {
@@ -211,4 +252,16 @@ h1 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2.5rem;
+}
+
+.sub-title {
+  font-size: 1.5rem;
+}
+
+.sub-sub-title {
+  color: var(--color-3);
+}
+
+.italic {
+  font-style: italic;
 }
