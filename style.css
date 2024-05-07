@@ -39,42 +39,9 @@ body {
   margin-left: 5.125rem;
 }
 
-header {
-  border-right: 0.1rem solid var(--color-w-4);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  background-color: var(--color-w-1);
-}
-
-header nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  padding: 0 1rem;
+.wrapper {
+  max-width: 80rem;
   margin-inline: auto;
-  height: 100%;
-}
-
-header nav a {
-  display: flex;
-  padding: 0.5rem;
-  border-radius: var(--basic-border-radius);
-  border: var(--basic-border-style);
-  transition: var(--basic-transition);
-}
-
-header nav a:hover,
-header nav a.active {
-  background-color: var(--color-w-2);
-}
-
-header nav a img {
-  width: 2rem;
-  aspect-ratio: 1;
 }
 
 #home {
@@ -115,14 +82,83 @@ header nav a img {
 
 #home img {
   width: 12.5rem;
+  height: 12.5rem;
   aspect-ratio: 1;
   border-radius: 50%;
   -webkit-user-drag: none;
 }
 
 #about {
-  /* display: none; */
   background-color: var(--color-w-2);
+  display: grid;
+  row-gap: 4rem;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 2rem;
+}
+
+.about img {
+  border-radius: 50%;
+  aspect-ratio: 1;
+  width: 20rem;
+  height: 20rem;
+  background-color: var(--color-w-4);
+  filter: grayscale(92.5%);
+  transition: var(--basic-transition);
+}
+
+.about img:hover {
+  filter: grayscale(15%);
+}
+
+.about .about-text-wrapper {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+header {
+  border-right: 0.1rem solid var(--color-w-4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-w-1);
+}
+
+header nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 1rem;
+  margin-inline: auto;
+  height: 100%;
+}
+
+header nav a {
+  display: flex;
+  padding: 0.5rem;
+  border-radius: var(--basic-border-radius);
+  border: var(--basic-border-style);
+  transition: var(--basic-transition);
+}
+
+header nav a:hover,
+header nav a.active {
+  background-color: var(--color-w-2);
+}
+
+header nav a img {
+  width: 2rem;
+  height: 2rem;
+  aspect-ratio: 1;
 }
 
 .hero-text {
@@ -173,4 +209,6 @@ h1 {
 
 .title {
   text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
 }
