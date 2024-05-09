@@ -30,7 +30,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
   color: var(--color-1);
   background-color: var(--color-w-1);
 }
@@ -111,6 +111,7 @@ body {
   background-color: var(--color-w-5);
   filter: grayscale(15%) brightness(105%);
   transition: var(--basic-transition);
+  -webkit-user-drag: none;
 }
 
 .about img:hover {
@@ -124,7 +125,7 @@ body {
   gap: 1.25rem;
 }
 
-.education-wrapper {
+.timeline-wrapper {
   display: grid;
   row-gap: 2rem;
   width: 100%;
@@ -133,7 +134,7 @@ body {
   overflow: hidden;
 }
 
-.education-wrapper::before {
+.timeline-wrapper::before {
   content: "";
   display: block;
   width: 0.125rem;
@@ -144,7 +145,7 @@ body {
   margin-block-start: 1rem;
 }
 
-.education {
+.timeline {
   line-height: 2rem;
   position: relative;
 }
@@ -219,10 +220,14 @@ p {
   color: var(--color-2);
 }
 
-h1 {
-  font-size: 3rem;
+h1,
+h2 {
   font-weight: 800;
   font-family: "Nunito", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
 }
 
 .code-text {
@@ -248,10 +253,15 @@ h1 {
   background-color: var(--color-2);
 }
 
-.title {
+h1.title {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2.5rem;
+}
+
+h2.title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .sub-title {
@@ -264,4 +274,37 @@ h1 {
 
 .italic {
   font-style: italic;
+}
+
+.list {
+  margin-left: 1.5rem;
+}
+
+.icon-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+.icon {
+  width: 6rem;
+  height: 5rem;
+  filter: grayscale(100%);
+  transition: var(--basic-transition);
+  object-fit: contain;
+}
+
+.icon.black-icon {
+  filter: grayscale(0) invert(35%);
+  transition: var(--basic-transition);
+}
+
+.icon:hover {
+  filter: grayscale(0%) invert(0);
+}
+
+.skills-wrapper {
+  display: grid;
+  row-gap: 2rem;
 }
