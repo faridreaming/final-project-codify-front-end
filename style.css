@@ -97,6 +97,10 @@ body {
   row-gap: 4rem;
 }
 
+#projects {
+  background-color: var(--color-w-2);
+}
+
 .about {
   display: flex;
   justify-content: center;
@@ -295,13 +299,13 @@ h2.title {
   object-fit: contain;
 }
 
-.icon.black-icon {
-  filter: grayscale(0) invert(35%);
-  transition: var(--basic-transition);
+.icon.dark-icon {
+  opacity: 75%;
 }
 
 .icon:hover {
-  filter: grayscale(0%) invert(0);
+  filter: grayscale(0%);
+  opacity: 100%;
 }
 
 .skills-wrapper {
