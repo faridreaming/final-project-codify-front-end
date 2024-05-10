@@ -16,6 +16,8 @@
   --color-3-25: #415a7740;
   --color-4: #778da9;
   --color-w-1: #f8f9fa;
+  --color-w-1-50: #f8f9fa80;
+  --color-w-1-25: #f8f9fa40;
   --color-w-2: #e9ecef;
   --color-w-3: #dee2e6;
   --color-w-4: #ced4da;
@@ -59,7 +61,7 @@ h1 {
 .container {
   padding: 8rem 2rem;
   /* width: calc(100vw - 5.125rem); */
-  margin-left: 5.125rem;
+  padding-left: 7.125rem;
 }
 
 .wrapper {
@@ -291,12 +293,23 @@ h1 {
 }
 
 header {
-  border-right: 0.1rem solid var(--color-w-4);
+  border-right: 0.1rem solid var(--color-w-5);
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
-  background-color: var(--color-w-1);
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-w-1-25);
+  z-index: -1;
+  backdrop-filter: blur(10rem);
 }
 
 header nav {
@@ -315,12 +328,21 @@ header nav a {
   padding: 0.5rem;
   border-radius: var(--basic-border-radius);
   border: var(--basic-border-style);
+  border-color: var(--color-w-5);
   transition: var(--basic-transition);
 }
 
-header nav a:hover,
+header nav a:hover {
+  background-color: var(--color-w-3);
+}
+
 header nav a.active {
-  background-color: var(--color-w-2);
+  background-color: var(--color-2);
+  border-color: var(--color-2);
+}
+
+header nav a.active img {
+  filter: invert(100%);
 }
 
 header nav a img {
@@ -363,6 +385,7 @@ h2.title {
 
 .sub-title {
   font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .sub-sub-title {
@@ -432,12 +455,18 @@ h2.title {
   border-color: var(--color-w-5);
   outline: none;
   color: var(--color-1);
-  /* background-color: var(--color-w-2); */
+  outline: 0.25rem solid transparent;
+  transition: var(--basic-transition);
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   color: var(--color-3);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline-color: var(--color-3-25);
 }
 
 .contact-form input[type="text"] {
@@ -450,11 +479,16 @@ h2.title {
 
 .contact-form textarea {
   grid-area: message;
-  resize: none;
+  resize: vertical;
 }
 
 .contact-form button {
   grid-area: submit;
+  outline: 0.25rem solid transparent;
+}
+
+.contact-form button:focus {
+  outline-color: var(--color-3-50);
 }
 
 footer {
@@ -499,3 +533,28 @@ footer .wrapper {
   display: grid;
   place-content: end;
 }
+
+/* .arrow-up {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  aspect-ratio: 1;
+  background-color: var(--color-3);
+  border-radius: 50%;
+  place-content: center;
+  cursor: pointer;
+  transition: var(--basic-transition);
+  opacity: 0;
+  display: none;
+}
+
+.arrow-up:hover {
+  background-color: var(--color-2);
+  transform: translateY(-0.5rem);
+}
+
+.arrow-up img {
+  filter: invert(100%);
+} */
