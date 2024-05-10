@@ -167,6 +167,10 @@ h1 {
   background-color: var(--color-w-2);
 }
 
+#contact {
+  background-color: var(--color-w-2);
+}
+
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -376,4 +380,122 @@ h2.title {
 .skills-wrapper {
   display: grid;
   row-gap: 2rem;
+}
+
+.certifications .button {
+  padding: 0.25rem 1rem;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 1rem;
+}
+
+.certifications .button img {
+  filter: invert(100%);
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact-info {
+  display: grid;
+  row-gap: 2rem;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact .contact-logo {
+  width: 2rem;
+  height: 2rem;
+  aspect-ratio: 1;
+}
+
+.contact-form {
+  display: grid;
+  column-gap: 0.5rem;
+  row-gap: 1rem;
+  grid-template-areas: "name email" "message message" "submit submit";
+  grid-template-rows: 3rem auto 3rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  border-radius: var(--basic-border-radius);
+  border: var(--basic-border-style);
+  border-color: var(--color-w-5);
+  outline: none;
+  color: var(--color-1);
+  /* background-color: var(--color-w-2); */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--color-3);
+}
+
+.contact-form input[type="text"] {
+  grid-area: name;
+}
+
+.contact-form input[type="email"] {
+  grid-area: email;
+}
+
+.contact-form textarea {
+  grid-area: message;
+  resize: none;
+}
+
+.contact-form button {
+  grid-area: submit;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-w-2);
+}
+
+footer .container {
+  width: 100%;
+  padding-block: 4rem;
+}
+
+footer .wrapper {
+  width: 100%;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-wrapper .links {
+  display: flex;
+  gap: 4rem;
+}
+
+.footer-wrapper .links > * {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-wrapper .links a {
+  font-size: 1.25rem;
+  color: var(--color-3);
+  width: fit-content;
+}
+
+.copyright {
+  display: grid;
+  place-content: end;
 }
