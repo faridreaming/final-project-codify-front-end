@@ -1,19 +1,3 @@
-// const arrow = document.querySelector(".arrow-up");
-
-// window.addEventListener("scroll", () => {
-//   if (window.scrollY > 0) {
-//     arrow.style.display = "grid";
-//     setTimeout(() => {
-//       arrow.style.opacity = 1;
-//     }, 0);
-//   } else {
-//     arrow.style.opacity = 0;
-//     setTimeout(() => {
-//       arrow.style.display = "none";
-//     }, 300);
-//   }
-// });
-
 const contactForm = document.querySelector(".contact-form");
 contactForm.addEventListener("submit", (event) => {
   event.preventDefault();
