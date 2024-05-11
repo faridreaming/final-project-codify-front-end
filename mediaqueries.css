@@ -21,7 +21,7 @@
   }
   header {
     border-top: 0.1rem solid var(--color-w-5);
-    position: fixed;
+    position: sticky;
     top: calc(100% - 66px);
     left: 0;
     right: 0;
@@ -120,13 +120,7 @@
     height: calc(100dvh - 58px);
   }
   header {
-    /* border-top: 0.1rem solid var(--color-w-5);
-    position: fixed; */
     top: calc(100% - 58px);
-    /* left: 0;
-    right: 0;
-    height: fit-content;
-    z-index: 9999; */
   }
   .hero-text h1 {
     font-size: 1.75rem;

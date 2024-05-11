@@ -44,32 +44,3 @@ window.addEventListener("scroll", function () {
     }
   });
 });
-const navbar = document.querySelector("header");
-let deviceWidth = window.innerWidth;
-handleResize();
-window.addEventListener("resize", handleResize);
-
-function handleResize() {
-  deviceWidth = window.innerWidth;
-  if (deviceWidth < 1020) {
-    navbar.style.top = `calc(100% - ${navbar.clientHeight}px)`;
-    window.addEventListener("scroll", handleScroll);
-  } else {
-    navbar.style.top = "0";
-    window.removeEventListener("scroll", handleScroll);
-  }
-}
-let prevScrollpos = window.scrollY;
-let scrolling = false;
-
-function handleScroll() {
-  if (!scrolling) {
-    let currentScrollPos = window.scrollY;
-    if (prevScrollpos < currentScrollPos) {
-      navbar.style.top = `calc(100% - ${navbar.clientHeight}px)`;
-    } else {
-      navbar.style.top = `calc(100% - ${navbar.clientHeight}px)`;
-    }
-    prevScrollpos = currentScrollPos;
-  }
-}
