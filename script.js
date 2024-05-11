@@ -19,7 +19,6 @@ function isTopOfElementInViewport(el) {
   const rect = el.getBoundingClientRect();
   return rect.top >= 0 && rect.top <= 0.5 * window.innerHeight;
 }
-
 let sectionLocation = "home";
 const menuItems = {
   home: "abbr[title='Home'] a",
@@ -29,7 +28,6 @@ const menuItems = {
   certifications: "abbr[title='Certifications'] a",
   contact: "abbr[title='Contact'] a",
 };
-
 window.addEventListener("scroll", function () {
   const sections = document.querySelectorAll("main .container");
   sections.forEach((section) => {
@@ -46,3 +44,32 @@ window.addEventListener("scroll", function () {
     }
   });
 });
+const navbar = document.querySelector("header");
+let deviceWidth = window.innerWidth;
+handleResize();
+window.addEventListener("resize", handleResize);
+
+function handleResize() {
+  deviceWidth = window.innerWidth;
+  if (deviceWidth < 1020) {
+    navbar.style.top = `calc(100% - ${navbar.clientHeight}px)`;
+    window.addEventListener("scroll", handleScroll);
+  } else {
+    navbar.style.top = "0";
+    window.removeEventListener("scroll", handleScroll);
+  }
+}
+let prevScrollpos = window.scrollY;
+let scrolling = false;
+
+function handleScroll() {
+  if (!scrolling) {
+    let currentScrollPos = window.scrollY;
+    if (prevScrollpos < currentScrollPos) {
+      navbar.style.top = "100%";
+    } else {
+      navbar.style.top = `calc(100% - ${navbar.clientHeight}px)`;
+    }
+    prevScrollpos = currentScrollPos;
+  }
+}
