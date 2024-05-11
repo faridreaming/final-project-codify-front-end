@@ -52,6 +52,9 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
   }
+  .footer-wrapper {
+    margin-bottom: 2rem;
+  }
 }
 @media screen and (max-width: 898px) {
   .footer-wrapper {
