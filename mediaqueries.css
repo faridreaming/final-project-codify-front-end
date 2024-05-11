@@ -3,7 +3,7 @@
     padding: 8rem 4rem;
   }
   #home {
-    height: calc(100dvh - 66px + 0.1rem);
+    height: calc(100dvh - 66px);
   }
   #home::before {
     left: 0;
@@ -113,6 +113,18 @@
   }
 }
 @media screen and (max-width: 560px) {
+  #home {
+    height: calc(100dvh - 58px);
+  }
+  header {
+    /* border-top: 0.1rem solid var(--color-w-5);
+    position: fixed; */
+    top: calc(100% - 58px);
+    /* left: 0;
+    right: 0;
+    height: fit-content;
+    z-index: 9999; */
+  }
   .hero-text h1 {
     font-size: 1.75rem;
   }
@@ -129,9 +141,6 @@
   }
 }
 @media screen and (max-width: 506px) {
-  #home {
-    height: calc(100dvh - 58px + 0.1rem);
-  }
   #home img {
     width: 10rem;
     height: 10rem;
