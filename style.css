@@ -7,15 +7,17 @@
   vertical-align: baseline;
   box-sizing: border-box;
 }
-
 :root {
   --color-1: #0d1b2a;
   --color-2: #1b263b;
+  --color-2-50: #1b263b80;
+  --color-2-25: #1b263b40;
   --color-3: #415a77;
   --color-3-50: #415a7780;
   --color-3-25: #415a7740;
   --color-4: #778da9;
   --color-w-1: #f8f9fa;
+  --color-w-1-75: #f8f9fabf;
   --color-w-1-50: #f8f9fa80;
   --color-w-1-25: #f8f9fa40;
   --color-w-2: #e9ecef;
@@ -28,48 +30,38 @@
   --basic-transition: 0.3s;
   --medium-border-radius: 0.75rem;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 body {
   font-family: "Nunito", sans-serif;
   color: var(--color-1);
   background-color: var(--color-w-1);
 }
-
 a {
   text-decoration: none;
   color: inherit;
 }
-
 p {
   font-size: 1.25rem;
   color: var(--color-2);
 }
-
 h1,
 h2 {
   font-weight: 800;
 }
-
 h1 {
   font-size: 3rem;
 }
-
 .container {
   padding: 8rem 2rem;
-  /* width: calc(100vw - 5.125rem); */
   padding-left: 7.125rem;
 }
-
 .wrapper {
   max-width: 80rem;
   width: 100%;
   margin-inline: auto;
 }
-
 .button {
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -81,40 +73,33 @@ h1 {
   transition: var(--basic-transition);
   font-size: 1rem;
 }
-
 .button:hover {
   background-color: var(--color-2);
 }
-
 .button-disabled {
   background-color: var(--color-w-5);
   color: var(--color-w-1);
   cursor: not-allowed;
 }
-
 .button-disabled:hover {
   background-color: var(--color-w-5);
 }
-
 .icon-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
   gap: 1rem;
   justify-items: center;
 }
-
 .icon {
-  width: 6rem;
-  height: 5rem;
+  width: 5rem;
+  height: 4rem;
   filter: grayscale(100%);
   transition: var(--basic-transition);
   object-fit: contain;
 }
-
 .icon:hover {
   filter: grayscale(0%);
 }
-
 #home {
   display: flex;
   flex-direction: column;
@@ -122,9 +107,7 @@ h1 {
   align-items: center;
   height: 100dvh;
   gap: 1rem;
-  overflow: hidden;
 }
-
 #home::before {
   content: "";
   position: absolute;
@@ -137,7 +120,6 @@ h1 {
   background-size: cover;
   background-position: center;
 }
-
 #home::after {
   content: "";
   position: absolute;
@@ -150,7 +132,6 @@ h1 {
   background-size: cover;
   background-position: center;
 }
-
 #home img {
   width: 12.5rem;
   height: 12.5rem;
@@ -158,27 +139,22 @@ h1 {
   border-radius: 50%;
   -webkit-user-drag: none;
 }
-
 #about {
   background-color: var(--color-w-2);
   display: grid;
   row-gap: 4rem;
 }
-
 #projects {
   background-color: var(--color-w-2);
 }
-
 #contact {
   background-color: var(--color-w-2);
 }
-
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 2rem;
 }
-
 .project {
   display: flex;
   flex-direction: column;
@@ -190,47 +166,38 @@ h1 {
   background-color: var(--color-w-1);
   height: fit-content;
 }
-
 .project img {
   filter: grayscale(100%);
   transition: var(--basic-transition);
 }
-
 .project:hover {
   border-color: var(--collor-accent);
 }
-
 .project:hover img {
   filter: grayscale(0%);
 }
-
 .project-text {
   padding: 1rem;
   display: grid;
   row-gap: 1rem;
 }
-
 .project-text .icon-wrapper {
   grid-template-columns: repeat(auto-fill, minmax(2rem, 1fr));
 }
-
 .action-wrapper {
   display: flex;
   gap: 0.5rem;
 }
-
 .project-text .icon {
   width: 2rem;
   height: 2rem;
   aspect-ratio: 1;
 }
-
 .about {
   display: grid;
   grid-template-columns: auto auto;
-  column-gap: 2rem;
+  gap: 2rem;
 }
-
 .about-image {
   display: block;
   background-color: var(--color-w-5);
@@ -240,26 +207,22 @@ h1 {
   aspect-ratio: 1;
   overflow: hidden;
 }
-
 .about-image img {
   width: 100%;
   height: 100%;
-  filter: grayscale(100%) brightness(105%);
+  filter: grayscale(80%) brightness(105%);
   transition: var(--basic-transition);
   -webkit-user-drag: none;
 }
-
 .about-image img:hover {
   filter: grayscale(25%) brightness(105%);
 }
-
 .about .about-text-wrapper {
   text-align: justify;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
 }
-
 .timeline-wrapper {
   display: grid;
   row-gap: 2rem;
@@ -268,7 +231,6 @@ h1 {
   position: relative;
   overflow: hidden;
 }
-
 .timeline-wrapper::before {
   content: "";
   display: block;
@@ -279,12 +241,10 @@ h1 {
   position: absolute;
   margin-block-start: 1rem;
 }
-
 .timeline {
   line-height: 2rem;
   position: relative;
 }
-
 .sub-title::before {
   content: "";
   display: inline-block;
@@ -298,15 +258,14 @@ h1 {
   background-color: var(--collor-accent);
   margin-block: 0.5rem 0;
 }
-
 header {
   border-right: 0.1rem solid var(--color-w-5);
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
+  transition: var(--basic-transition);
 }
-
 header::before {
   content: "";
   position: absolute;
@@ -318,7 +277,6 @@ header::before {
   z-index: -1;
   backdrop-filter: blur(10rem);
 }
-
 header nav {
   display: flex;
   flex-direction: column;
@@ -329,7 +287,6 @@ header nav {
   margin-inline: auto;
   height: 100%;
 }
-
 header nav a {
   display: flex;
   padding: 0.5rem;
@@ -338,26 +295,21 @@ header nav a {
   border-color: var(--color-w-5);
   transition: var(--basic-transition);
 }
-
 header nav a:hover {
-  background-color: var(--color-w-3);
+  background-color: var(--color-2-25);
 }
-
 header nav a.active {
   background-color: var(--color-2);
   border-color: var(--color-2);
 }
-
 header nav a.active img {
   filter: invert(100%);
 }
-
 header nav a img {
   width: 2rem;
   height: 2rem;
   aspect-ratio: 1;
 }
-
 .hero-text {
   display: grid;
   grid-template-rows: auto auto auto;
@@ -365,53 +317,42 @@ header nav a img {
   align-items: start;
   text-align: center;
 }
-
 .hero-button {
   margin-block-start: 1rem;
   padding: 1rem;
 }
-
 .code-text {
   font-family: "Jetbrains Mono", monospace;
 }
-
 .tag {
   color: var(--collor-accent);
 }
-
 h1.title {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2.5rem;
 }
-
 h2.title {
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
-
 .sub-title {
   font-size: 1.5rem;
   font-weight: 700;
 }
-
 .sub-sub-title {
   color: var(--color-3);
 }
-
 .italic {
   font-style: italic;
 }
-
 .list {
   margin-left: 1.5rem;
 }
-
 .skills-wrapper {
   display: grid;
   row-gap: 2rem;
 }
-
 .certifications .button {
   padding: 0.25rem 1rem;
   display: flex;
@@ -419,33 +360,28 @@ h2.title {
   width: fit-content;
   gap: 1rem;
 }
-
 .certifications .button img {
   filter: invert(100%);
 }
-
 .contact-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
-
 .contact-info {
   display: grid;
   row-gap: 2rem;
 }
-
 .contact {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-
 .contact .contact-logo {
   width: 2rem;
   height: 2rem;
   aspect-ratio: 1;
 }
-
 .contact-form {
   display: grid;
   column-gap: 0.5rem;
@@ -453,7 +389,6 @@ h2.title {
   grid-template-areas: "name email" "message message" "submit submit";
   grid-template-rows: 3rem auto 3rem;
 }
-
 .contact-form input,
 .contact-form textarea {
   padding: 1rem;
@@ -465,39 +400,31 @@ h2.title {
   outline: 0.25rem solid transparent;
   transition: var(--basic-transition);
 }
-
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   color: var(--color-3);
 }
-
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline-color: var(--color-3-25);
 }
-
 .contact-form input[type="text"] {
   grid-area: name;
 }
-
 .contact-form input[type="email"] {
   grid-area: email;
 }
-
 .contact-form textarea {
   grid-area: message;
   resize: vertical;
 }
-
 .contact-form button {
   grid-area: submit;
   outline: 0.25rem solid transparent;
 }
-
 .contact-form button:focus {
   outline-color: var(--color-3-50);
 }
-
 footer {
   display: flex;
   justify-content: center;
@@ -505,43 +432,36 @@ footer {
   background-color: var(--color-w-2);
   flex-direction: column;
 }
-
 footer .container {
   width: 100%;
   padding-block: 4rem;
 }
-
 footer .wrapper {
   width: 100%;
 }
-
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
 }
-
 .footer-wrapper .links {
   display: flex;
   gap: 4rem;
 }
-
 .footer-wrapper .copyright {
-  display: grid;
-  place-content: end;
+  display: flex;
+  justify-content: end;
+  align-items: end;
 }
-
 .footer-wrapper .links > * {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-
 .footer-wrapper .links a {
   font-size: 1.25rem;
   color: var(--color-3);
   width: fit-content;
 }
-
 .copyright {
   display: grid;
   place-content: end;
