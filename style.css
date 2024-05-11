@@ -32,11 +32,13 @@
 }
 html {
   scroll-behavior: smooth;
+  height: -webkit-fill-available-;
 }
 body {
   font-family: "Nunito", sans-serif;
   color: var(--color-1);
   background-color: var(--color-w-1);
+  height: -webkit-fill-available-;
 }
 a {
   text-decoration: none;
@@ -106,6 +108,7 @@ h1 {
   justify-content: center;
   align-items: center;
   height: 100dvh;
+  height: -webkit-fill-available-;
   gap: 1rem;
 }
 #home::before {
