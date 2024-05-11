@@ -119,6 +119,14 @@
   .sub-title {
     font-size: 1.25rem;
   }
+  header nav {
+    gap: 0;
+    justify-content: space-evenly;
+  }
+  header nav a img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
 @media screen and (max-width: 506px) {
   #home {
@@ -154,14 +162,6 @@
   .footer-wrapper .links a {
     font-size: 1rem;
   }
-  header nav {
-    gap: 0;
-    justify-content: space-evenly;
-  }
-  header nav a img {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
 }
 @media screen and (max-width: 388px) {
   #home::before,
@@ -178,5 +178,12 @@
   }
   .contact img {
     display: none;
+  }
+  h1.title {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  .timeline h1 {
+    font-size: 1rem;
   }
 }
