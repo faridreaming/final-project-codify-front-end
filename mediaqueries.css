@@ -2,11 +2,11 @@
   .container {
     padding: 8rem 4rem;
   }
-  #home {
-    height: calc(100dvh - 66px);
-  }
   #home::before {
     left: 0;
+  }
+  #home::after {
+    right: 0;
   }
   .hero-text h1 {
     font-size: 2.5rem;
@@ -33,7 +33,7 @@
     align-items: center;
     z-index: 9999;
     right: 0;
-    bottom: 0;
+    bottom: -66px;
     top: auto;
     border-right: none;
     border-top: 0.1rem solid var(--color-w-5);
@@ -106,12 +106,6 @@
   }
 }
 @media screen and (max-width: 560px) {
-  #home {
-    height: calc(100dvh - 58px);
-  }
-  header {
-    top: calc(100% - 58px);
-  }
   .hero-text h1 {
     font-size: 1.75rem;
   }

@@ -28,7 +28,24 @@ const menuItems = {
   certifications: "abbr[title='Certifications'] a",
   contact: "abbr[title='Contact'] a",
 };
+const navbar = document.querySelector("header nav");
+let deviceWidth = window.innerWidth;
+let navbarHeight = 0;
+
+window.addEventListener("resize", function () {
+  deviceWidth = window.innerWidth;
+  if (deviceWidth < 1020) {
+    navbarHeight = 66;
+  } else if (deviceWidth < 561) {
+    navbarHeight = 58;
+  } else {
+    navbarHeight = 0;
+  }
+});
+
 window.addEventListener("scroll", function () {
+  if (window.scrollY > navbarHeight) navbar.style.bottom = "0";
+  else navbar.style.bottom = `-${navbarHeight}px`;
   const sections = document.querySelectorAll("main .container");
   sections.forEach((section) => {
     if (isTopOfElementInViewport(section)) {
