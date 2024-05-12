@@ -261,15 +261,7 @@ h1 {
   background-color: var(--collor-accent);
   margin-block: 0.5rem 0;
 }
-header {
-  border-right: 0.1rem solid var(--color-w-5);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  transition: var(--basic-transition);
-}
-header::before {
+header nav::before {
   content: "";
   position: absolute;
   top: 0;
@@ -281,6 +273,12 @@ header::before {
   backdrop-filter: blur(10rem);
 }
 header nav {
+  border-right: 0.1rem solid var(--color-w-5);
+  transition: var(--basic-transition);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;

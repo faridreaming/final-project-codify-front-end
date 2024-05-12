@@ -19,24 +19,8 @@
     font-size: 1.75rem;
     margin-bottom: 1.5rem;
   }
-  header {
-    border-top: 0.1rem solid var(--color-w-5);
-    position: sticky;
-    top: calc(100% - 66px);
-    left: 0;
-    right: 0;
-    height: fit-content;
-    z-index: 9999;
-  }
-  header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  header nav::before {
     background-color: var(--color-w-1-75);
-    z-index: -1;
     backdrop-filter: blur(0.5rem);
   }
   header nav {
@@ -47,6 +31,12 @@
     margin-inline: auto;
     height: fit-content;
     align-items: center;
+    z-index: 9999;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    border-right: none;
+    border-top: 0.1rem solid var(--color-w-5);
   }
   .contact-wrapper {
     grid-template-columns: 1fr;
