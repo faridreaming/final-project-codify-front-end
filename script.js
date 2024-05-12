@@ -78,8 +78,10 @@ function setDarkMode(isDarkMode) {
   localStorage.setItem("dark-mode", isDarkMode);
   if (isDarkMode) {
     document.body.classList.add("dark");
+    toggleDarkMode.innerText = "Light Mode";
   } else {
     document.body.classList.remove("dark");
+    toggleDarkMode.innerText = "Dark Mode";
   }
 }
 toggleDarkMode.addEventListener("click", () => {
