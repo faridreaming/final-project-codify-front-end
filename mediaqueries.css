@@ -1,3 +1,9 @@
+@media screen and (max-width: 1093px) {
+  .footer-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
 @media screen and (max-width: 1019px) {
   .container {
     padding: 8rem 4rem;
@@ -23,6 +29,9 @@
     background-color: var(--color-w-1-75);
     backdrop-filter: blur(0.5rem);
   }
+  .dark header nav::before {
+    background-color: var(--color-2-75);
+  }
   header nav {
     display: flex;
     flex-direction: row;
@@ -47,10 +56,6 @@
   }
 }
 @media screen and (max-width: 898px) {
-  .footer-wrapper {
-    flex-direction: column;
-    gap: 2rem;
-  }
   .icon-wrapper {
     grid-template-columns: repeat(auto-fill, minmax(4rem, 1fr));
   }
@@ -94,6 +99,9 @@
   h2.title {
     font-size: 1.5rem;
     margin-bottom: 1.25rem;
+  }
+  .links .sub-title {
+    font-size: 1.25rem;
   }
 }
 @media screen and (max-width: 601px) {
