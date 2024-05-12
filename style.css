@@ -10,6 +10,7 @@
 :root {
   --color-1: #0d1b2a;
   --color-2: #1b263b;
+  --color-2-75: #1b263bbf;
   --color-2-50: #1b263b80;
   --color-2-25: #1b263b40;
   --color-3: #415a77;
@@ -37,6 +38,9 @@ body {
   font-family: "Nunito", sans-serif;
   color: var(--color-1);
   background-color: var(--color-w-1);
+}
+li::marker {
+  color: var(--color-1);
 }
 a {
   text-decoration: none;
@@ -105,7 +109,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100dvh;
+  height: 100svh;
   height: -webkit-fill-available-;
   gap: 1rem;
 }
@@ -245,6 +249,9 @@ h1 {
 .timeline {
   line-height: 2rem;
   position: relative;
+}
+.timeline p {
+  color: var(--color-3);
 }
 .sub-title::before {
   content: "";
@@ -443,8 +450,10 @@ footer .wrapper {
   justify-content: space-between;
 }
 .footer-wrapper .links {
-  display: flex;
-  gap: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  row-gap: 2rem;
+  column-gap: 4rem;
 }
 .footer-wrapper .copyright {
   display: flex;
@@ -458,10 +467,94 @@ footer .wrapper {
 }
 .footer-wrapper .links a {
   font-size: 1.25rem;
-  color: var(--color-3);
+  color: var(--color-4);
   width: fit-content;
+  cursor: pointer;
+  transition: var(--basic-transition);
+}
+.footer-wrapper .links a:hover {
+  color: var(--color-1);
 }
 .copyright {
   display: grid;
   place-content: end;
+}
+/* DARK MODE */
+.dark {
+  background-color: var(--color-2);
+}
+.dark .hero-text h1,
+.dark h1.title,
+.dark h2.title,
+.dark .sub-title,
+.dark li::marker {
+  color: var(--color-w-1);
+}
+.dark p {
+  color: var(--color-w-5);
+}
+.dark #about,
+.dark #projects,
+.dark #contact,
+.dark footer {
+  background-color: var(--color-1);
+}
+.dark .button {
+  background-color: var(--color-4);
+  color: var(--color-1);
+}
+.dark .button:hover {
+  background-color: var(--color-3);
+}
+.dark .icon-dark {
+  filter: invert(100%);
+}
+.dark .footer-wrapper .links a:hover {
+  color: var(--color-w-4);
+}
+.dark .timeline-wrapper::before {
+  background-color: var(--color-3-50);
+}
+.dark .timeline p {
+  color: var(--color-4);
+}
+.dark .project {
+  background-color: var(--color-1);
+  border-color: var(--color-3-50);
+}
+.dark .project:hover {
+  border-color: var(--color-3);
+}
+.dark .certifications .button img {
+  filter: invert(0%);
+}
+.dark .contact-logo {
+  filter: invert(100%);
+}
+.dark .contact-form input,
+.dark .contact-form textarea {
+  color: var(--color-w-1);
+  background-color: var(--color-2);
+  border-color: var(--color-4);
+}
+.dark .contact-form input::placeholder,
+.dark .contact-form textarea::placeholder {
+  color: var(--color-w-5);
+}
+.dark header nav::before {
+  background-color: var(--color-2-25);
+}
+.dark header nav,
+.dark header nav a {
+  border-color: var(--color-3);
+}
+.dark header nav a:hover {
+  background-color: var(--color-3-50);
+}
+.dark header nav img {
+  filter: invert(100%);
+}
+.dark header nav a.active {
+  background-color: var(--color-3-50);
+  border-color: var(--color-3);
 }
