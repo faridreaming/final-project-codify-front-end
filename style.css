@@ -38,6 +38,7 @@ body {
   font-family: "Nunito", sans-serif;
   color: var(--color-1);
   background-color: var(--color-w-1);
+  transition: var(--basic-transition);
 }
 li::marker {
   color: var(--color-1);
@@ -148,12 +149,15 @@ h1 {
   background-color: var(--color-w-2);
   display: grid;
   row-gap: 4rem;
+  transition: var(--basic-transition);
 }
 #projects {
   background-color: var(--color-w-2);
+  transition: var(--basic-transition);
 }
 #contact {
   background-color: var(--color-w-2);
+  transition: var(--basic-transition);
 }
 .projects {
   display: grid;
@@ -245,6 +249,7 @@ h1 {
   background-color: var(--color-3-25);
   position: absolute;
   margin-block-start: 1rem;
+  transition: var(--basic-transition);
 }
 .timeline {
   line-height: 2rem;
@@ -276,6 +281,7 @@ header nav::before {
   background-color: var(--color-w-1-25);
   z-index: -1;
   backdrop-filter: blur(10rem);
+  transition: var(--basic-transition);
 }
 header nav {
   border-right: 0.1rem solid var(--color-w-5);
@@ -387,6 +393,7 @@ h2.title {
   width: 2rem;
   height: 2rem;
   aspect-ratio: 1;
+  transition: var(--basic-transition);
 }
 .contact-form {
   display: grid;
@@ -437,6 +444,7 @@ footer {
   align-items: center;
   background-color: var(--color-w-2);
   flex-direction: column;
+  transition: var(--basic-transition);
 }
 footer .container {
   width: 100%;
@@ -446,12 +454,12 @@ footer .wrapper {
   width: 100%;
 }
 .footer-wrapper {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
 .footer-wrapper .links {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   row-gap: 2rem;
   column-gap: 4rem;
 }
@@ -479,7 +487,6 @@ footer .wrapper {
   display: grid;
   place-content: end;
 }
-/* DARK MODE */
 .dark {
   background-color: var(--color-2);
 }
