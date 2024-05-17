@@ -510,6 +510,10 @@ footer .wrapper {
   background-color: var(--color-4);
   color: var(--color-1);
 }
+.dark .button-disabled {
+  background-color: var(--color-3);
+  color: var(--color-1);
+}
 .dark .button:hover {
   background-color: var(--color-3);
 }
