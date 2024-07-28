@@ -143,6 +143,7 @@ h1 {
   height: 12.5rem;
   aspect-ratio: 1;
   border-radius: 50%;
+  border: 0.25rem solid var(--color-w-3);
   -webkit-user-drag: none;
 }
 #about {
