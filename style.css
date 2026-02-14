@@ -203,7 +203,6 @@ h1 {
   aspect-ratio: 1;
 }
 .about {
-  background-color: var(--color-w-2);
   transition: var(--basic-transition);
   max-width: 50rem;
   margin-inline: auto;
@@ -212,8 +211,8 @@ h1 {
   display: block;
   background-color: var(--color-4);
   border-radius: 50%;
-  width: 17.5rem;
-  height: 17.5rem;
+  width: 12rem;
+  height: 12rem;
   aspect-ratio: 1;
   overflow: hidden;
   float: left;
@@ -227,9 +226,13 @@ h1 {
   object-fit: cover;
   filter: grayscale(50%) brightness(105%);
 }
+.about .about-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 .about .about-text-wrapper p {
   text-align: justify;
-  margin-bottom: 1.25rem;
 }
 .timeline-wrapper {
   display: grid;
@@ -506,8 +509,9 @@ footer .wrapper {
   background-color: var(--color-1);
 }
 .dark .about-image img {
-  filter: drop-shadow(0px -2px 0px white) drop-shadow(0px 2px 0px white) drop-shadow(-2px 0px 0px white)
-    drop-shadow(2px 0px 0px white) grayscale(20%) brightness(105%);
+  filter: drop-shadow(0px -2px 0px white) drop-shadow(0px 2px 0px white)
+    drop-shadow(-2px 0px 0px white) drop-shadow(2px 0px 0px white)
+    grayscale(20%) brightness(105%);
 }
 .dark .button {
   background-color: var(--color-4);
